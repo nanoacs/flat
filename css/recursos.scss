@@ -1,0 +1,17 @@
+//Colores
+$fondo:#F1F1F1;
+$header:#FFFFFF;
+$header_oscuro:#30343F;
+$boton:#F17C71;
+$fondo_grande:#212427;
+$texto:#373737;
+
+//Fuentes
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700');
+//font-family: 'Dancing Script', cursive;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+//font-family: 'Montserrat', sans-serif;
+
+@mixin borde($color){
+	border:1px solid $color;
+}

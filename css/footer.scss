@@ -1,0 +1,16 @@
+
+footer{
+	margin-top: 2rem;
+	background:$header;
+	padding:1rem .6rem;
+	font-size: .8rem;
+}
+
+/*******************queries footer********************/
+@media (min-width: 700px){
+	footer{
+		p{
+			font-weight:bold;
+		}
+	}
+}

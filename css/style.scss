@@ -1,0 +1,65 @@
+@import 'recursos.scss';
+
+/******************Estilos generales*****************/
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	background:$fondo_grande;
+	text-align: center;
+	color:$texto;
+}
+
+.grande{
+	 background:$fondo;
+	 width: 100%;
+	 max-width: 1600px;
+	 margin:0 auto;
+}
+
+img{
+	width:100%;
+}
+
+a{
+	color:$texto;
+	text-decoration:none;
+}
+
+ul{
+	list-style: none;
+}
+
+/******************Header*****************/
+@import 'header.scss';
+
+/******************Main*****************/
+@import 'main.scss';
+
+/******************Footer*****************/
+@import 'footer.scss';
+
+
+@media(min-width: 980px){
+	.cont{
+		width:95%;
+		margin:0 auto;
+		//border:1px solid blue;
+	}
+}
+
+@media(min-width: 1024px){
+	.cont{
+		width:78%;
+	}
+}
+
+@media(min-width:1600px){
+	.cont{
+		width:60%;
+	}
+}

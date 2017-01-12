@@ -1,0 +1,166 @@
+
+.submenu{
+	padding:0rem .6rem;
+	margin:2rem 0rem;
+
+	ul{
+		text-align: left;
+	}
+
+	li{
+		display:inline-block;
+		background:$header;
+		padding:.6rem .4rem;
+		border-radius: 4px;
+		margin-left: 3px;
+		a{
+			font-size:.8rem;
+			color:lighten($texto,15%);
+			&:hover{
+				color:$texto;
+			}
+		}
+	}
+
+	li.prin{
+		background:darken($boton,8%);
+		a{
+			color:$fondo;
+			&:hover{
+				color:$header;
+			}
+		}
+		
+	}
+}
+
+////Articles
+section{
+	article{
+		//border:1px solid blue;
+		width: 100%;
+		height: 330px;
+		padding:0 .6rem;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		font-size:5rem;
+		margin-bottom: .7rem;
+		cursor: pointer;
+
+		span{
+			font-weight: 400;
+			color:$header;
+		}
+
+		h4{
+			font-family: 'Dancing Script', cursive;
+			font-size: 4rem;
+			transform: rotate(-7deg);
+			color:$header;
+		}
+		
+	}
+}
+
+$bgs:(#E0293F,#F48229,#0A2341,#A0CAC0,#BEC3C7,#73B3DE,#2c3e50,#E24A26,#336E7B);
+$colors:(rojo,ama,blue,aqua,grey,sky,os,zal,yel);
+
+@for $i from 1 through 9{
+	$ele:nth($colors,$i);
+	article.#{$ele}{
+		background:nth($bgs,$i);
+		&:hover{
+			background:nth($bgs,$i) url(../imagenes/pattern2.png);
+		}
+	}
+}
+
+
+/*******************queries main********************/
+
+@media (min-width: 450px){
+
+	section{
+		article{
+			height:400px;
+		}
+	}
+	article{
+		img{
+			width:95%;
+		}
+	}
+
+	.submenu{
+		li{
+			padding:.6rem;
+			margin-left:7px;
+		}
+	}
+}
+
+
+@media (min-width: 550px){
+	article{
+		img{
+			width:70%;
+		}
+	}
+}
+
+
+@media (min-width: 700px){
+	section{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		article{
+			width:49%;
+			height:330px;
+			margin-bottom:.9rem;
+		}
+	}
+
+	article{
+		img{
+			width:90%;
+		}
+	}
+}
+
+@media(min-width:980px){
+	section{
+		article{
+			width:32.33%;
+			height:290px;
+		}
+	}
+
+	.submenu{
+		padding:0rem;
+		li{
+			border:1px solid rgba($texto,.1);
+			margin:0;
+			margin-right: 1rem;
+		}
+	}
+}
+
+@media(min-width:1024px){
+	section{
+		article{
+			height:250px;
+		}
+	}
+}
+
+
+@media(min-width:1300px){
+	section{
+		article{
+			height:290px;
+		}
+	}
+}
+

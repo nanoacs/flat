@@ -1,0 +1,179 @@
+
+header{
+	background:$header;
+
+	h1{
+		font-family: 'Dancing Script', cursive;
+		font-size: 3rem;
+		transform: rotate(-7deg);
+	}
+
+
+	nav{
+		display:none;
+		background:$fondo;
+		ul{
+
+			li{
+				padding: .6rem 0rem;
+				&:hover{
+					background:lighten($fondo,3%);
+				}
+			}
+			
+			a{
+				display: block;
+				&:hover{
+					color:$fondo_grande;
+				}
+			}
+		}
+	}
+
+}
+
+
+header .titulos{
+	padding:.4rem .6rem;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+
+	span{
+		font-size:1.5em;
+		cursor:pointer;
+		&:hover{
+			color:#000;
+		}
+	}
+}
+
+.cont > h3{
+	display:none;
+}
+
+
+header .sli{
+	background:$header_oscuro url(../imagenes/pattern2.png);
+	color:$header;
+	padding:4rem 0rem;
+	line-height:1.5;
+
+}
+
+.mensaje{
+	padding:1rem;
+	h3{
+		font-size:1rem;
+		color:lighten($texto,15%);
+	}
+}
+
+
+/*******************queries header********************/
+
+@media (min-width: 450px){
+	header .sli{
+		line-height:3.5;
+	}
+}
+
+@media (min-width: 550px){
+	header{
+		h1{
+			font-size:3.5rem;
+		}
+	}
+
+	header .titulos{
+		span{
+			font-size:1.9rem;
+		}
+	}
+
+	header .sli{
+		line-height:4;
+	}
+}
+
+@media (min-width: 700px){
+	header .sli{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		line-height:1.5;
+		height: 280px;
+
+		h2{
+			font-size:2rem;
+		}
+	}
+
+	.cont > h3{
+		display:block;
+		text-transform: uppercase;
+		font-size:.9rem;
+		font-weight:400;
+	}
+}
+
+@media(min-width:980px){
+	header > .cont{
+		//border:1px solid blue;
+	}
+	header .titulos{
+		padding:0;
+		span{
+			display:none;
+		}
+	}
+
+	header {
+		nav{
+			display:block;
+			width: 50%;
+			background:none;
+			ul{
+				display:flex;
+				justify-content:flex-end;
+				align-items: center;
+
+				li{
+					padding:0;
+					margin-left: 1.5rem;
+					&:hover{
+						background:none;
+					}
+				}
+				a{
+					display:inline;
+					color:lighten($texto,10%);
+				}
+			}
+		}
+	}
+
+	header > .cont.menu{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header .sli{
+		height:300px;
+	}
+}
+
+@media(min-width:1024px){
+	header > .cont.menu{
+		padding:.5rem 0rem;
+	}
+
+	header .sli{
+		height:350px;
+	}
+}
+
+
+	
